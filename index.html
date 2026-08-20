@@ -19,7 +19,7 @@
             <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
         </li>
         <li>
-            <a href="#contact" class="nav__link--anchor nav__link--anchor-primary">Contact</a>
+            <a href="#" onclick="document.getElementById('contact-modal').style.display='flex'; return false;" class="nav__link--anchor nav__link--anchor-primary">Contact</a>
         </li>
     </ul>
 </nav>
@@ -62,14 +62,20 @@
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="contact__info">
-        <p class="contact__info--text">Want to get in touch? Reach out below.</p>
-        <a href="mailto:cjcoleman110913@gmail.com" class="contact__info--email">cjcoleman110913@gmail.com</a>
-        <div class="contact__info--links">
-    <a href="https://github.com/cjcoleman110913-oss" target="_blank" class="contact__info--link">GitHub</a>
-    <a href="https://www.linkedin.com/in/calynn-coleman" target="_blank" class="contact__info--link">LinkedIn</a>
+<div id="contact-modal" class="modal">
+    <div class="modal__content">
+        <span class="modal__close" onclick="document.getElementById('contact-modal').style.display='none'">&times;</span>
+        <div class="modal__form">
+            <h3 class="contact__form--heading">Let's have a chat!</h3>
+            <p class="contact__form--subheading">I'm currently open to new opportunities.</p>
+            <form class="contact__form">
+                <input type="text" name="name" placeholder="Name" class="contact__form--input" required>
+                <input type="email" name="email" placeholder="Email" class="contact__form--input" required>
+                <textarea name="message" placeholder="Message" class="contact__form--textarea" required></textarea>
+                <button type="submit" class="contact__form--submit">Send it my way</button>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="contact__form-wrapper">
     <h3 class="contact__form--heading">Let's have a chat!</h3>
